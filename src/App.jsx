@@ -1,4 +1,10 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes
+} from "react-router-dom";
 import Home from "./pages/Home";
 import PokemonPage from "./modules/pokemon/containers";
 import ErrorPage from "./pages/ErrorPage";
@@ -30,9 +36,14 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Theme>
-      <Layout>
-        <RouterProvider router={router} />
-      </Layout>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/pokemon" element={<PokemonPage />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
     </Theme>
   );
 }

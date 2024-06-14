@@ -1,5 +1,5 @@
 import Footer from "./Footer";
-import PageHeader from "./page-header/navbar/PageHeader";
+import PageHeader from "./page-header/PageHeader";
 import PropTypes from "prop-types";
 
 const Layout = ({ children }) => {

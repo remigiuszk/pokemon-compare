@@ -1,8 +1,8 @@
-import Container from "../../Container";
+import Container from "../Container";
 import styled from "styled-components";
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
-import HamburgerMenu from "../../../../components/layout/page-header/navbar/HamburgerMenu";
+import Navbar from "./navbar/Navbar";
 
 const StyledPageHeaderContainer = styled(Container)`
   justify-content: space-between;
@@ -12,7 +12,7 @@ const StyledPageHeaderContainer = styled(Container)`
 const PageHeader = () => {
   return (
     <StyledPageHeaderContainer>
-      <HamburgerMenu />
+      <Navbar />
       <Logo />
       <SearchBar />
     </StyledPageHeaderContainer>

@@ -1,5 +1,5 @@
-import * as types from "../actions/actionTypes";
-import initialState from "./initialState";
+import * as types from "../../../redux/actions/actionTypes";
+import initialState from "../../../redux/reducers/initialState";
 
 const pokemonReducer = (state = initialState.pokemon, action) => {
   switch (action.type) {

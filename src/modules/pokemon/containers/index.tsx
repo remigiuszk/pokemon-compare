@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import Layout from "../layout/Layout";
 import styled from "styled-components";
-import StyledContainer from "../layout/Container";
-import Header from "../typography/Header";
+import StyledContainer from "../../layout/Container";
+import Header from "../../../typography/Header";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import * as pokemonActions from "../../redux/actions/pokemonActions";
+import * as pokemonActions from "../actions/pokemonActions";
 import PropTypes from "prop-types";
 import PokemonList from "../components/PokemonList";
 
@@ -23,12 +22,12 @@ const PokemonPage = ({ pokemonList, actions }) => {
   }, []);
 
   return (
-    <Layout>
+    <>
       <PokemonContainer direction="column">
         <Header>Welcome to the pokemon page.</Header>
         <PokemonList pokemonList={pokemonList}></PokemonList>
       </PokemonContainer>
-    </Layout>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
-import * as types from "./actionTypes";
-import instance from "../../components/api/api_instance";
+import * as types from "../../../redux/actions/actionTypes";
+import instance from "../../../api/api_instance";
 
 export function loadPokemonSuccess(pokemonList) {
   return { type: types.LOAD_POKEMON_SUCCESS, payload: pokemonList };
